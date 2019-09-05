@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<!DOCTYPE html>
+<html>
+<link rel="shortcut icon" href="https://krunker.io/textures/classes/icon_11.png">
+<head>
+<script>
+  //(adsbygoogle = window.adsbygoogle || []).push({
+  //  google_ad_client: "ca-pub-4320147014939935",
+  //  enable_page_level_ads: true
+  //});
+</script>
+<title>Eyes Only!</title>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-139123367-1');
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<body ontouchstart="showCoordinates(event)" ontouchmove="showCoordinates(event)">
+<script>
+var touchdevice=false;
+
+function detectmob() { 
+ if( navigator.userAgent.match(/Android/i)
+ || navigator.userAgent.match(/webOS/i)
+ || navigator.userAgent.match(/iPhone/i)
+ || navigator.userAgent.match(/iPad/i)
+ || navigator.userAgent.match(/iPod/i)
+ || navigator.userAgent.match(/BlackBerry/i)
+ || navigator.userAgent.match(/Windows Phone/i)
+ ){
+    return true;
+  }
+ else {
+    return false;
+  }
+}
+
+
+if (detectmob()!==false) {
+//alert("not mobile!");
+var touchdevice = true;
+}
+</script>
+<style>
+
+body {margin: 0;
+  padding: 0;
+  background: #5B1D7F;
+  height: ;
+  
+		left: 0;
+        right: 0;
+        margin-left: 0;
+        margin-right: 0;
+}
+.eyes{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  text-align: center;
+}
+.eye{
+  width: 12em;
+  height: 12em;
+  background: #fff;
+  display: inline-block;
+  margin: 40px;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+}
+
+.ball{
+  width: 4em;
+  height: 4em;
+  background: #000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  border-radius: 50%; 
+}
+
+#active-area{
+height: 750px;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+	.eye {
+		width: 6em;
+		height: 6em;
+		}
+	.ball{
+		width: 2em;
+		height: 2em;
+		}
+		
+		
+		
+		
+button {
+        
+        outline: none;
+
+      }
+
+      button:nth-child(2) {
+        
+      }
+
+      button:focus {
+        
+      }
+
+      button:active {
+       
+      }
+
+      .buttonsContainer {
+ 
+		visibility : hidden;
+      }
+
+      .main {
+        
+      }
+
+      .mainHeading {
+        
+      }
+
+      .scrollTarget {
+        /*position: absolute; */
+        /* border: 2px solid #ff1a35; */
+        /* height: 200px; */
+        /* left: 35px; */
+        /* right: 35px; */
+       /* overflow: scroll; */
+        /* -webkit-overflow-scrolling: touch; */
+      }
+
+      .bodyScrollLockStatus {
+        
+      }		
+		
+}
+
+
+
+</style>
+<!-- here's to a hidden image of our eyes for use by websites that like to show an image next to a link (like FB does -->
+<img src="eyes.png" style="display: none;" />
+<!-- ------------------------------------------------------------------------------------------------------------------------------ -->
+
+<script> document.body.addEventListener('touchmove', function(event) {event.preventDefault();}, false); </script>
+<div class="main">
+ <div class="scrollTarget">
+<div id="active_area" >
+
+<div class="eyes">
+    <div class="eye">
+      <div class="ball"></div>
+    </div>
+
+    <div class="eye">
+      <div class="ball"></div>
+    </div>
+  </div>
+</div>
+<div class="addthis_inline_share_toolbox"></div>
+</div>
+</div>
+  
+<!-- ------------------------------------------------------------------------------------------------------------------------------ -->
+
+<!-- p>The horizontal and vertical coordinates of the touch are: <span id="demo"></span></p-->
+
+<script>
+  var balls = document.getElementsByClassName("ball");
+  document.onmousemove = function(){
+    var x = event.clientX * 100 / window.innerWidth + "%";
+    var y = event.clientY * 100 / window.innerHeight + "%";
+    //event.clientX => get the horizontal coordinate of the mouse
+    //event.clientY => get the Vertical coordinate of the mouse
+    //window.innerWidth => get the browser width
+    //window.innerHeight => get the browser height
+
+    for(var i=0;i<2;i++){
+      balls[i].style.left = x;
+      balls[i].style.top = y;
+      balls[i].style.transform = "translate(-"+x+",-"+y+")";
+    }
+  }
+</script>
+
+<script>
+// touch features
+var balls = document.getElementsByClassName("ball");
+function showCoordinates(event) {
+touchdevice=true; // set here because we only get here by detecting touch activity
+  var xx = event.touches[0].clientX * 100 / window.innerWidth + "%";
+  var yy = event.touches[0].clientY * 100 / window.innerHeight + "%";
+  //document.getElementById("demo").innerHTML = xx + ", " + yy;
+  
+  for(var ii=0;ii<2;ii++){
+      balls[ii].style.left = xx;
+      balls[ii].style.top = yy;
+      balls[ii].style.transform = "translate(-"+xx+",-"+yy+")";
+    }
+  
+}
+</script>
+
+<!-- ------------------------------------------------------------------------------------------------------------------------------ -->
+
+ 
+
+   <div id="buttons" class="buttonsContainer" style="visibility:hidden">
+      <button id="buttonid" class="disableBodyScroll" ontouchstart="" >Disable Body Scroll</button>
+      <button class="enableBodyScroll" ontouchstart="" >Enable Body Scroll</button>
+    </div>
+
+    <script src="bundle.js"></script>
+	<script>
+document.getElementById("buttonid").click();
+	</script>
+<script>
+if (touchdevice===true) {
+//alert("touch device!");
+}
+else {
+//alert(navigator.userAgent);
+alert("Click anywhere to add more eyes!\nReload the page to clear the eyes.");
+	
+document.addEventListener("click", function(event) {
+  eyes(event.clientX, event.clientY, 20 + 1 * 50, event);
+});
+
+
+function eyes(x, y, size, event) {
+  var canvas = document.createElement("canvas"),
+      context = canvas.getContext("2d");
+  document.body.appendChild(canvas);
+  canvas.style.position = "absolute";
+  canvas.style.left = (x - size - 5) + "px";
+  canvas.style.top = (y - size  / 2 - 5) + "px";
+  
+  
+  var rect = canvas.getBoundingClientRect();
+  canvas.width = size * 2 + 10;
+  canvas.height = size + 10;
+
+  onMouseMove(event);
+  
+  document.addEventListener("mousemove", onMouseMove);
+
+  function onMouseMove(event) {
+    var x = event.clientX - rect.left,
+        y = event.clientY - rect.top;
+    context.clearRect(0, 0, size * 2 + 10, size + 10);
+    drawEye(x, y, size / 2 + 5, size / 2 + 5);
+    drawEye(x, y, size * 1.5 + 5, size / 2 + 5);
+  }
+  
+  function drawEye(x, y, cx, cy) {
+    var dx = x - cx,
+        dy = y - cy,
+        angle = Math.atan2(dy, dx);
+    context.save();
+    context.translate(cx, cy);
+    context.rotate(angle);
+    context.beginPath();
+    context.arc(0, 0, size / 2, 0, Math.PI * 2);
+    context.fillStyle = "white";
+    context.fill();
+    context.stroke();
+    context.beginPath();
+    context.arc(size * 0.4, 0, size * 0.1, 0, Math.PI * 2);
+	context.fillStyle = "black";
+    
+    context.fill();
+    context.restore();
+    
+  }
+}}
+
+</script>
+<script>
+//if (detectmob()===false) {
+//alert("not mobi");}
+
+function detectmob() { 
+ if( navigator.userAgent.match(/Android/i)
+ || navigator.userAgent.match(/webOS/i)
+ || navigator.userAgent.match(/iPhone/i)
+ || navigator.userAgent.match(/iPad/i)
+ || navigator.userAgent.match(/iPod/i)
+ || navigator.userAgent.match(/BlackBerry/i)
+ || navigator.userAgent.match(/Windows Phone/i)
+ ){
+    return true;
+  }
+ else {
+    return false;
+  }
+}
+</script>
+</body>
+</html>
