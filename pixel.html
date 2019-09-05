@@ -1,0 +1,149 @@
+  <html>
+    <head>
+      <style>
+        * {
+    text-align: center;
+}
+body {
+    background: url("https://3.bp.blogspot.com/-gNvN5Fw7yvI/XGbf14yuCAI/AAAAAAAAFsw/HJLUz5Ce2Y8XaOYUwQaqwDIg5D6vhbOXQCHMYCw/s1600/gucci-wallpaper-logos.jpg") no-repeat center center fixed;
+-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: black;
+}
+
+h1 {
+    font-family: Sofia;
+    font-size: 80px;
+    margin: 0.1em;
+}
+
+h2 {
+    font-family: Architects Daughter;
+    margin: 1em 0 0.25em;
+}
+
+h2:first-of-type {
+    margin-top: 0.5em;
+}
+
+table,
+tr,
+td {
+    border: 1px solid black;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+tr {
+    background-color: white;
+    height: 20px;
+}
+
+td {
+    width: 20px;
+}
+
+input[type=number] {
+    width: 6em;
+}
+
+#subm {
+    background-color: #1C1F32;
+    color:white;
+    font-family:monospace;
+    font-size: 16px;
+}
+
+form {
+    
+    font-style: italic;
+    font-size: 19px;
+}
+#watermark {
+  color: white;
+  font-size: 15pt;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  z-index: -1;
+  left:-100px;
+  top:-200px;
+}
+
+footer {
+    padding-top: 20%;
+}
+}
+      </style>  
+    </head>
+    <title>Pixel Art Maker</title>
+<link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Architects Daughter' rel='stylesheet'>
+  <h1>Pixel Art Maker</h1>
+
+    <h2>Choose Grid Size</h2>
+    <form id="sizePicker">
+        Rows:
+        <input type="number" id="input_height" name="height" min="1" value="1">
+      &nbsp;&nbsp;&nbsp;
+        Columns:
+        <input type="number" id="input_width" name="width" min="1" value="1">
+      <br>
+      <br>
+        <input type="submit" id="subm">
+    </form>
+
+    <h2>Pick A Color</h2>
+    <input type="color" id="colorPicker">
+
+    <h2>Design Canvas</h2>
+    <table id="pixel_canvas"></table>
+    <script src="designs.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+       const table = $("#pixel_canvas");
+ 
+function makeGrid() {
+   
+   let userRow = $("#input_height").val();  
+   let userCol = $("#input_width").val();
+   table.children().remove();  
+  //Reset
+  
+  for (let i = 0; i < userRow; i++) {
+    table.append("<tr></tr>");
+    
+    for (let j = 0; j < userCol; j++) {
+      table.children()
+        .last()
+        .append("<td></td>");
+    }
+}
+}
+
+function colorPick() {
+  	$('tr').children().on('click', function(){
+    let color = $("#colorPicker").val();
+		$(this).css('background', color);
+		});
+}
+
+
+$('#subm').click( function(event){
+  event.preventDefault(); //In order to prevent Reloading page while submit
+  makeGrid(); 
+  colorPick();
+ 
+});
+
+    </script>  
+    <footer>
+    <div id="watermark">
+        <p>aaryank's Project</p>
+    </div>
+    </footer>
