@@ -1,0 +1,98 @@
+<style>
+  
+h1, h2, h3, h4, h5 {
+	text-shadow: 2px 2px 4px #999;
+	text-align: center;
+	margin: auto;
+	color: #333;
+} 
+  
+button {
+    border-radius:51%;
+    top: 200px;
+	padding: 200px;
+	background-color: limegreen;
+	margin: 10px;
+	color: white;
+	text-shadow: none;
+	box-shadow: 1px 0px 1px green,
+				0px 1px 1px green,
+				2px 1px 1px green,
+				1px 2px 1px green,
+				3px 2px 1px green,
+				2px 3px 1px green,
+				4px 3px 1px green,
+				3px 4px 1px green,
+				5px 4px 1px green,
+				4px 5px 1px green,
+				6px 5px 1px green;
+	cursor: pointer;
+	display: inline-block;
+	margin-top: 11px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	position: relative;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+
+	border: 0px;
+	font-size: 45px;
+	font-weight: normal;
+	font-family: 'Josefin Slab', cursive;
+	outline: 0px;
+}
+
+button:hover {
+	background-color: green;
+	box-shadow: 1px 0px 1px limegreen,
+				0px 1px 1px limegreen,
+				2px 1px 1px limegreen,
+				1px 2px 1px limegreen,
+				3px 2px 1px limegreen,
+				2px 3px 1px limegreen,
+				4px 3px 1px limegreen,
+				3px 4px 1px limegreen,
+				5px 4px 1px limegreen,
+				4px 5px 1px limegreen,
+				6px 5px 1px limegreen;  
+}
+
+button:active {
+    top: 2px;
+    left: 3px;
+}
+  
+</style>  
+<script>  
+<!--
+/*
+Random link button- By JavaScript Kit (http://javascriptkit.com)
+Over 300+ free scripts!
+This credit MUST stay intact for use
+*/
+
+//specify random links below. You can have as many as you want
+var randomlinks=new Array()
+
+randomlinks[0]="http://tinytuba.com"
+randomlinks[1]="http://corndog.io"
+randomlinks[2]="http://eelslap.com"
+randomlinks[3]="http://cant-not-tweet-this.com"
+randomlinks[4]="http://weirdorconfusing.com"
+randomlinks[5]="http://heeeeeeeey.com"  
+
+function randomlink(){
+window.location=randomlinks[Math.floor(Math.random()*randomlinks.length)]
+}
+//-->
+</script>
+<center>
+<button id="button" value="Random Link" onclick="randomlink()">Random<br>Website</button>
+</center>
+<!--Uncomment below to use a regular text link instead
+<a href="javascript:randomlink()">Random Link</a>
+-->
