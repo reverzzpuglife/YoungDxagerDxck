@@ -1,0 +1,522 @@
+<html lang="en"><head>
+    <style>
+      body
+{
+	background-color: #000;
+	color: #FFF;
+	padding: 25px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	max-width: 700px;
+	margin: auto;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Bubblegum+Sans');
+*{
+    margin:0px;
+    padding: 0px;
+}
+
+body{
+    background-color: black;
+}  
+
+html{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+h1{
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 0px black;
+    font-size: 48px;
+    margin-top:20px;
+    font-family: 'Bubblegum Sans', cursive;
+    font-weight: normal;
+}
+
+.picture{
+    width: 1000px;
+    height: 558px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    margin-top: 40px;
+    border: 5px solid black;
+}
+
+img{
+    width: 250px;
+    height: 186px;
+    margin: 0px;
+    padding: 0px;
+}      
+      
+a:link { color: white;  text-decoration: none;}
+a:hover { color:white; text-decoration: underline;}      
+a:visited { color: white; }
+.fancytype { font-family: 'Pompiere', cursive; }
+#intro { text-align: center; }
+#kepler-3-formula2, #kelpler-3-formula { font-size: 2.5em; }
+.overline { text-decoration: overline; }
+
+.planet
+{
+	width: 200px;
+	padding: 10px;
+	text-align: center;
+}
+
+p
+{
+	line-height: 1.5em;
+	font-size: .9em;
+}
+
+#milkyway
+{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+label { color: #feff7f; }
+
+#birthdate
+{
+	text-align: center;
+	font-size: 1.5em;
+}
+
+h1
+{
+	font-size: 3em;
+	margin: 0;
+}
+
+h2
+{
+	font-size: 1.5em;
+	margin: 0;
+}
+
+h3 { font-size: 1.2em; margin: 0; }
+
+.bigbrain1
+{
+	width: 104px;
+	float: left;
+	margin: 0 10px 10px 0;
+	text-align: center;
+}
+
+.bigbrain2
+{
+	width: 104px;
+	float: right;
+	margin: 0 0 10px 10px;
+	text-align: center;
+}
+
+.todo
+{
+	font-size: 1.6em;
+	margin: 30px 0 10px 0;
+}
+
+#planet-table { margin: 30px 0; }
+
+table, th, td
+{
+	margin: auto;
+	border: 1px solid white;
+	font-size: .9em;
+}
+
+th, td
+{
+	padding: 15px;
+	text-align: left;
+}
+
+#ellipse-shell
+{
+	text-align: center;
+	margin: 50px 0;
+}
+
+#kelpler-3-formula, #kepler-3-formula2
+{
+	text-align: center;
+	margin: 30px 0;
+}
+
+#cartoon { float: right; }
+#equation { text-align: center; }
+
+#birthdate input
+{
+	position: relative;
+	bottom: 5px;
+	margin-right: 15px;
+}
+
+.ageyear
+{
+	margin: 10px 0;
+	text-align: left;
+}
+
+.ageyear input { margin: 0 5px 5px 0; }
+
+#animated-earth
+{
+	float: left;
+	margin: 0 5px 5px 0;
+}
+
+.js-required
+{
+	color: red;
+	text-align: center;
+}
+
+ul { margin: 5px 0 10px 0; }
+li { margin: 10px 0; }
+labels { font-size: .9em; }
+
+  </style>  
+	<link href="https://fonts.googleapis.com/css?family=Pompiere" rel="stylesheet">
+	<meta charset="utf-8">
+	<title>Your Age on Other Planets</title>
+	<link rel="stylesheet" type="text/css" href="age.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="convert.js" async=""></script><script src="//survey.survicate.com/workspaces/8ce35f7ab4bd1a4bc9886751921b5b3a/web_surveys.js" async=""></script><script type="text/javascript" async="" src="https://www.google-analytics.com/plugins/ua/linkid.js"></script><script type="text/javascript" async="" src="https://sjs.bizographics.com/insight.min.js"></script><script type="text/javascript" async="" src="//www.googleadservices.com/pagead/conversion_async.js"></script><script type="text/javascript" async="" src="//api.survicate.com/assets/survicate.js"></script><script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="https://ssl.google-analytics.com/ga.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KQZNKT"></script><script type="text/javascript" src="age.js">
+	</script>
+	<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KQZNKT');</script>
+<!-- End Google Tag Manager -->
+<script src="https://www.googleadservices.com/pagead/conversion/794145459/?random=1562554398234&amp;cv=9&amp;fst=1562554398234&amp;num=1&amp;value=0&amp;label=MBWoCObvnIwBELPl1voC&amp;guid=ON&amp;resp=GooglemKTybQhCsO&amp;u_h=1080&amp;u_w=1920&amp;u_ah=1024&amp;u_aw=1920&amp;u_cd=24&amp;u_his=3&amp;u_tz=-300&amp;u_java=false&amp;u_nplug=4&amp;u_nmime=33&amp;gtm=2wg6k2&amp;sendb=1&amp;frm=0&amp;url=https%3A%2F%2Fwww.exploratorium.edu%2Fronh%2Fage%2F&amp;ref=https%3A%2F%2Fwww.google.com%2F&amp;tiba=Your%20Age%20on%20Other%20Worlds%20%7C%20Exploratorium&amp;bttype=purchase&amp;async=1&amp;rfmt=3&amp;fmt=4"></script></head>
+<body cz-shortcut-listen="true">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KQZNKT"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<div id="intro">
+	<h1 class="fancytype">
+		YOUR AGE ON OTHER PLANETS
+	</h1> 
+</div>
+<noscript>
+	<div class="js-required">
+		<hr>
+		This Page requires a Javascript capable browser 
+		<hr>
+	</div>
+</noscript>
+<h3 class="todo fancytype">
+  <big>--<big>TO DO AND NOTICE</big>--</big>
+</h3>
+<ul>
+	<li><big>Fill in your birthdate below in the space indicated. (Note you must enter the year as a 4-digit number!)</big>
+      </li><li><big> Click on the "Calculate" button. </big>
+	</li><li><big>Notice that your age on other worlds will automatically fill in. Notice that Your age is different on the different worlds. Notice that your age in "days" varies wildly. </big>
+	</li><li><big>Notice when your next birthday on each world will be. The date given is an "earth date".  </big>
+      </li><li><big>Don't change the age on other world, even though that does nothing.</big>
+  </li><li><big>Click <a href="supportingbrowsers.html" target="_blank"><big><b>here</b></big></a> for more information about which browsers support JavaScript.</big></li></ul>
+<form method="POST">
+	<div id="birthdate" class="fancytype">
+<!-- <img src="images/enter_age.gif" width="276" height="26" > -->
+        ENTER YOUR BIRTHDATE HERE<big> ➟</big><label for="month"> MONTH </label> 
+		<input type="text" name="month" size="5" placeholder="MM" tabindex="1">
+		<label for="day"> DAY </label> 
+		<input type="text" name="day" size="5" placeholder="DD" tabindex="2">
+		<label for="year"> YEAR </label> 
+		<input type="text" name="year" size="5" placeholder="YYYY" tabindex="3">
+		<input type="button" value="Calculate" onclick="compute_age(this.form)">
+	</div>
+	<hr>
+	<div id="milkyway">
+		<div class="planet">
+			<h4>
+				MERCURY
+			</h4>
+			<p><img src="https://www.exploratorium.edu/ronh/age/images/mercury.gif" width="100" height="100" alt="Mercury"></p> <br>
+			Your age is 
+			<div class="ageyear">
+				<input type="text" name="outputmrcday" size="7">
+				<label for="outputmrcday">Mercurian days</label><br>
+				<input type="text" name="outputmrcyear" size="7">
+				<label for="outputmrcyear">Mercurian years</label> 
+			</div>
+			<label for="outputmrcbday">Next Birthday</label><br>
+			<input type="text" name="outputmrcbday" size="20">
+		</div>
+		<div class="planet">
+			<h4>
+				VENUS
+			</h4>
+			<p><img src="https://www.exploratorium.edu/ronh/age/images/venus.gif" width="100" height="100" alt="Venus"></p> <br>
+			Your age is 
+			<div class="ageyear">
+				<input type="text" name="outputvnday" size="7">
+				<label for="outputvnday">Venusian days</label><br>
+				<input type="text" name="outputvnyear" size="7">
+				<label for="outputvnyear">Venusian years</label> 
+			</div>
+			<label for="outputvnbday">Next Birthday</label><br>
+			<input type="text" name="outputvnbday" size="20">
+		</div>
+		<div class="planet">
+			<h4>
+				EARTH
+			</h4>
+			<p><img src="https://www.exploratorium.edu/ronh/age/images/earth.gif" width="100" height="100" alt="Earth"></p> <br>
+			Your age is 
+			<div class="ageyear">
+				<input type="text" name="outputearthday" size="7">
+				<label for="outputearthday">Earth days</label><br>
+				<input type="text" name="outputearthyear" size="7">
+				<label for="outputearthyear">Earth years</label> 
+			</div>
+			<label for="outputearthbday">Next Birthday</label><br>
+			<input type="text" name="outputearthbday" size="20">
+		</div>
+		<div class="planet">
+			<h4>
+				MARS
+			</h4>
+			<p><img src="https://www.exploratorium.edu/ronh/age/images/mars.gif" width="100" height="100" alt="Mars"></p><br>
+			Your age is 
+			<div class="ageyear">
+				<input type="text" name="outputmarsday" size="7">
+				<label for="outputmarsday">Martian days</label><br>
+				<input type="text" name="outputmarsyear" size="7">
+				<label for="outputmarsyear">Martian years</label> 
+			</div>
+			<label for="outputmarsbday">Next Birthday </label>
+			<input type="text" name="outputmarsbday" size="20">
+		</div>
+		<div class="planet">
+			<h4>
+				JUPITER
+			</h4>
+			<p><img src="https://www.exploratorium.edu/ronh/age/images/jupiter.gif" width="100" height="100" alt="Jupiter"></p><br>
+			Your age is 
+			<div class="ageyear">
+				<input type="text" name="outputjupday" size="8">
+				<label for="outputjupday">Jovian days</label><br>
+				<input type="text" name="outputjupyear" size="8">
+				<label for="outputjupyear">Jovian years</label> 
+			</div>
+			<label for="outputjupbday">Next Birthday</label><br>
+			<input type="text" name="outputjupbday" size="20">
+		</div>
+		<div class="planet">
+			<h4>
+				SATURN
+			</h4>
+			<p><img src="https://www.exploratorium.edu/ronh/age/images/saturn.gif" width="100" height="100" alt="Saturn"></p><br>
+			Your age is 
+			<div class="ageyear">
+				<input type="text" name="outputsatday" size="8">
+				<label for="outputsatday">Saturnian days</label><br>
+				<input type="text" name="outputsatyear" size="8">
+				<label for="outputsatyear">Saturnian years</label> 
+			</div>
+			<label for="outputsatbday">Next Birthday</label><br>
+			<input type="text" name="outputsatbday" size="20">
+		</div>
+		<div class="planet">
+			<h4>
+				URANUS
+			</h4>
+			<p><img src="https://www.exploratorium.edu/ronh/age/images/uranus.gif" width="100" height="100" alt="Uranus"></p><br>
+			Your age is 
+			<div class="ageyear">
+				<input type="text" name="outputurday" size="8">
+				<label for="outputurday">Uranian days</label><br>
+				<input type="text" name="outputuryear" size="8">
+				<label for="outputuryear">Uranian years</label> 
+			</div>
+			<label for="outputurbday">Next Birthday</label><br>
+			<input type="text" name="outputurbday" size="20">
+		</div>
+		<div class="planet">
+			<h4>
+				NEPTUNE
+			</h4>
+			<p><img src="https://www.exploratorium.edu/ronh/age/images/neptune.gif" width="100" height="100" alt="Neptune"></p><br>
+			Your age is 
+			<div class="ageyear">
+				<input type="text" name="outputnepday" size="8">
+				<label for="outputnepday">Neptunian days</label><br>
+				<input type="text" name="outputnepyear" size="8">
+				<label for="outputnepyear">Neptunian years</label> 
+			</div>
+			<label for="outputnepbday">Next Birthday</label><br>
+			<input type="text" name="outputnepbday" size="20">
+		</div>
+		<div class="planet">
+			<h4>
+				PLUTO
+			</h4>
+			<p><img src="https://www.exploratorium.edu/ronh/age/images/pluto.gif" width="100" height="100" alt="Pluto"></p><br>
+			Your age is 
+			<div class="ageyear">
+				<input type="text" name="outputpltday" size="7">
+				<label for="outputpltday">Plutonian days</label><br>
+				<input type="text" name="outputpltyear" size="7">
+				<label for="outputpltyear">Plutonian years</label> 
+			</div>
+			<label for="outputpltbday">Next Birthday</label><br>
+			<input type="text" name="outputpltbday" size="20">
+		</div>
+	</div>
+</form>
+<hr>
+<h2 class="fancytype">
+	WHAT IS GOING ON?
+</h2>
+<h4>
+	The Days (And Years) Of Our Lives
+</h4>
+<p>
+Looking at the numbers above, you'll immediately notice that you are different ages on the different planets. This brings up the question of how we define the time intervals we measure. What is a day? What is a year? 
+</p>
+<p>
+	The earth is in motion. Actually, several different motions all at once. There are two that specifically interest us. First, the earth <b>rotates</b> on its axis, like a spinning top. Second, the earth <b>revolves</b> around the sun, like a tetherball at the end of a string going around the center pole. 
+	</p><p>
+		<img id="animated-earth" src="https://www.exploratorium.edu/ronh/age/images/aniearth.gif" width="56" height="60" alt="Earth">The top-like <b>rotation</b> of the earth on its axis is how we define the day. The time it takes the earth to rotate from noon until the next noon we define as one day. We further divide this period of time into 24 hours, each of which is divided into 60 minutes, each of which is broken into 60 seconds. There are no rules that govern the rotation rates of the planets, it all depends on how much "spin" was in the original material that went into forming each one. Giant Jupiter has lots of spin, turning once on its axis every 10 hours, while Venus takes 243 days to spin once. 
+		</p><p>
+			The <b>revolution</b> of the earth around the sun is how we define the year. A year is the time it takes the earth to make one revolution - a little over 365 days. 
+			</p><p>
+				We all learn in grade school that the planets move at differing rates around the sun. While earth takes 365 days to make one circuit, the closest planet, Mercury, takes only 88 days. Poor, ponderous, and distant Pluto takes a whopping 248 years for one revolution. Below is a table with the rotation rates and revolution rates of all the planets. 
+				</p><p>
+					</p><div id="planet-table">
+						<table>
+							<tbody><tr>
+                              <td><b>Planet<br>&nbsp;&nbsp;&nbsp;&nbsp;<big><big><big>⇣</big></big></big></b></td>
+								<td><b>Rotation Period</b></td>
+								<td><b>Revolution Period</b></td>
+							</tr>
+							<tr>
+								<td><b>Mercury</b></td>
+								<td>58.6 days</td>
+								<td>87.97 days</td>
+							</tr>
+							<tr>
+								<td><b>Venus</b></td>
+								<td>243 days</td>
+								<td>224.7 days</td>
+							</tr>
+							<tr>
+								<td><b> Earth</b></td>
+								<td> 0.99 days</td>
+								<td> 365.26 days</td>
+							</tr>
+							<tr>
+                              <td><b>Mars</b></td>
+								<td>1.03 days</td>
+								<td>1.88 years</td>
+							</tr>
+							<tr>
+								<td><b>Jupiter</b></td>
+								<td>0.41 days</td>
+								<td>11.86 years</td>
+							</tr>
+							<tr>
+								<td><b>Saturn</b></td>
+								<td>0.45 days</td>
+								<td>29.46 years</td>
+							</tr>
+							<tr>
+								<td><b>Uranus</b></td>
+								<td>0.72 days</td>
+								<td>84.01 years</td>
+							</tr>
+							<tr>
+								<td><b>Neptune</b></td>
+								<td>0.67 days</td>
+								<td>164.79 years</td>
+							</tr>
+							<tr>
+								<td><b>Pluto</b></td>
+								<td>6.39 days</td>
+								<td>248.59 years</td>
+							</tr>
+						</tbody></table>
+					</div>
+					<p>
+						Why the huge differences in periods? We need to go back to the time of Galileo, except that we're not going to look at his work, but rather at the work of one of his contemporaries, Johannes Kepler (1571-1630). 
+					</p>
+						Kepler briefly worked with the great Danish observational astronomer, Tycho Brahe. Tycho was a great and extremely accurate observer, but he did't have the mathematical capacity to analyze all of the data he collected. After Tycho's death in 1601, Kepler was able to obtain Tycho's observations. Tycho's observations of planetary motion were the most accurate of the time (before the invention of the telescope!). Using these observations, Kepler discovered that the planets do not move in circles, as 2000 years of "Natural Philosophy" had taught. He discovered that they move in ellipses. A ellipse is a sort of squashed circle with a short diameter (the "minor axis") and a longer diameter (the "major axis"). He found that the Sun was positioned at one "focus" of the ellipse (there are two "foci", both located on the major axis). He also found that when the planets were nearer the sun in their orbits, they move faster than when they were farther from the sun. Many years later, he discovered that the farther a planet was from the sun, on the average, the longer it took for that planet to make one complete revolution. These three laws, stated mathematically by Kepler, are known as "Kepler's Laws of Orbital Motion." Kepler's Laws are still used today to predict the motions of planets, comets, asteroids, stars, galaxies, and spacecraft.
+					<div id="ellipse-shell">
+						<div id="ellipse">
+							<img alt="ellipse animation" src="https://www.exploratorium.edu/ronh/age/images/ellipse.gif"> 
+							<p>
+								Here you see a planet in a very elliptical orbit. <br>
+								Note how it speeds up when it's near the Sun. 
+							</p>
+						</div>
+					</div>
+					<p>
+						Kepler's third law is the one that interests us the most. It states precisely that the period of time a planet takes to go around the sun squared is proportional to the average distance from the sun cubed. Here's the formula: 
+					</p>
+					<div id="kelpler-3-formula">
+						Period²=Distance³ 
+<!-- <img src="images/kepler_3_formula.gif"> -->
+					</div>
+					<p>
+						Let's just solve for the period by taking the square root of both sides: 
+					</p>
+					<div id="kepler-3-formula2">
+						Period=√<span class="overline">&nbsp;Distance³&nbsp;</span> 
+<!-- <img src="images/kepler_3_formula2.gif"> -->
+					</div>
+					<div id="cartoon">
+						<img src="https://www.exploratorium.edu/ronh/age/images/cartoon.gif" width="150" height="96" alt="Equations are guides to thinking"> 
+					</div>
+					<p>
+						Note that as the distance of the planet from the sun is increased, the period, or time to make one orbit, will get longer. Kepler didn't know the reason for these laws, though he knew it had something to do with the Sun and its influence on the planets. That had to wait 50 years for Isaac Newton to discover the universal law of gravitation. 
+					</p>
+					<h3>
+						The Gravity Of The Situation
+					</h3>
+					<div class="bigbrain1">
+						<img src="https://www.exploratorium.edu/ronh/age/images/newton.gif" width="104" height="148" alt="Isaac Newton"><br>
+						Isaac Newton 
+					</div>
+					<p>
+						Closer planets revolve faster, more distant planets revolve slower. Why? The answer is how gravity works. The force of gravity is a measure of the pull between two bodies. This force depends on a few things. First, it depends on the mass of the sun and on the mass of the planet you are considering. The heavier the planet, the stronger the pull. If you double the planet's mass, gravity pulls twice as hard. On the other hand, the farther the planet is from the sun, the weaker the pull between the two. The force gets weaker quite rapidly. If you double the distance, the force is one-fourth. If you triple the separation, the force drops to one-ninth. Ten times the distance, one-hundredth the force. See the pattern? The force drops off with the <b>square</b> of the distance. If we put this into an equation it would look like this: 
+					</p>
+					<div id="equation">
+						<img src="https://www.exploratorium.edu/ronh/age/images/equation.gif" width="123" height="57" alt="math equation"> 
+					</div>
+					<p>
+						The two "M's" on top are the sun's mass and the planet's mass. The "r" below is the distance between the two. The masses are in the numerator because the force gets bigger if they get bigger. The distance is in the denominator because the force gets smaller when the distance gets bigger. Note that the force never becomes zero no matter how far you travel. Knowing this law helps you inderstand why the planets move faster when they are closer to the sun - they are pulled on with a stronger force and are whipped around faster! 
+						</p><p>
+							</p><hr>
+  
+  <script>
+    
+    function compute_age(e){today=(new Date).getTime();var a=e.year.value,t=e.month.value-1,n=e.day.value;birthdate=new Date(a,t,n).getTime(),age=(today-birthdate)/864e5,age>0&&(e.outputmrcday.value=int_zero(10*age/58.6)/10,e.outputmrcyear.value=int_zero(10*age/87.97)/10,age/87.97>1?nextmrcbday=new Date(today+87.97*(1-(age/87.97-parseInt(age/87.97)))*24*3600*1e3):nextmrcbday=new Date(today+87.97*(1-age/87.97)*24*3600*1e3),e.outputmrcbday.value=getLongDate(nextmrcbday),e.outputvnday.value=int_zero(10*age/243)/10,e.outputvnyear.value=int_zero(10*age/224.7)/10,age/224.7>1?nextvnbday=new Date(today+224.7*(1-(age/224.7-parseInt(age/224.7)))*24*3600*1e3):nextvnbday=new Date(today+224.7*(1-age/224.7)*24*3600*1e3),e.outputvnbday.value=getLongDate(nextvnbday),e.outputearthday.value=int_zero(10*age)/10,e.outputearthyear.value=int_zero(10*age/365.26)/10,age/365.26>1?nextearthbday=new Date(today+365.26*(1-(age/365.26-parseInt(age/365.26)))*24*3600*1e3):nextearthbday=new Date(today+365.26*(1-age/365.26)*24*3600*1e3),e.outputearthbday.value=getLongDate(nextearthbday),e.outputmarsday.value=int_zero(10*age/1.03)/10,e.outputmarsyear.value=int_zero(10*age/686.98)/10,age/686.98>1?nextmarsbday=new Date(today+686.98*(1-(age/686.98-parseInt(age/686.98)))*24*3600*1e3):nextmarsbday=new Date(today+686.98*(1-age/686.98)*24*3600*1e3),e.outputmarsbday.value=getLongDate(nextmarsbday),e.outputjupday.value=int_zero(10*age/.41)/10,e.outputjupyear.value=int_zero(100*age/4332.71)/100,age/4332.71>1?nextjupbday=new Date(today+4332.71*(1-(age/4332.71-parseInt(age/4332.71)))*24*3600*1e3):nextjupbday=new Date(today+4332.71*(1-age/4332.71)*24*3600*1e3),e.outputjupbday.value=getLongDate(nextjupbday),e.outputsatday.value=int_zero(10*age/.45)/10,e.outputsatyear.value=int_zero(100*age/10759.5)/100,age/10759.5>1?nextsatbday=new Date(today+10759.5*(1-(age/10759.5-parseInt(age/10759.5)))*24*3600*1e3):nextsatbday=new Date(today+10759.5*(1-age/10759.5)*24*3600*1e3),e.outputsatbday.value=getLongDate(nextsatbday),e.outputurday.value=int_zero(10*age/.72)/10,e.outputuryear.value=int_zero(100*age/30685)/100,age/30685>1?nexturbday=new Date(today+30685*(1-(age/30685-parseInt(age/30685)))*24*3600*1e3):nexturbday=new Date(today+30685*(1-age/30685)*24*3600*1e3),e.outputurbday.value=getLongDate(nexturbday),e.outputnepday.value=int_zero(10*age/.67)/10,e.outputnepyear.value=int_zero(100*age/60190)/100,age/60190>1?nextnepbday=new Date(today+60190*(1-(age/60190-parseInt(age/60190)))*24*3600*1e3):nextnepbday=new Date(today+60190*(1-age/60190)*24*3600*1e3),e.outputnepbday.value=getLongDate(nextnepbday),e.outputpltday.value=int_zero(10*age/6.39)/10,e.outputpltyear.value=int_zero(1e3*age/90800)/1e3,age/90800>1?nextpltbday=new Date(today+90800*(1-(age/90800-parseInt(age/90800)))*24*3600*1e3):nextpltbday=new Date(today+90800*(1-age/90800)*24*3600*1e3),e.outputpltbday.value=getLongDate(nextpltbday))}function getLongDate(e){return theDay=dayNames[e.getDay()+1],theMonth=monthNames[e.getMonth()+1],theDate=e.getDate(),theYear=e.getFullYear(),""+theDay+", "+theMonth+" "+theDate+", "+theYear}function int_zero(e){return 1>e?0:parseInt(e,10)}monthNames=new Array(13),monthNames[1]="Jan",monthNames[2]="Feb",monthNames[3]="Mar",monthNames[4]="Apr",monthNames[5]="May",monthNames[6]="Jun",monthNames[7]="Jul",monthNames[8]="Aug",monthNames[9]="Sep",monthNames[10]="Oct",monthNames[11]="Nov",monthNames[12]="Dec",dayNames=new Array(8),dayNames[1]="Sun",dayNames[2]="Mon",dayNames[3]="Tues",dayNames[4]="Wed",dayNames[5]="Thur",dayNames[6]="Fri",dayNames[7]="Sat";
+  </script>  
+							
+<div id="indicator" style="background: rgb(255, 153, 0); width: 70px; height: 4px; position: fixed; top: 0px; left: 35px; z-index: 10000000; display: none;"></div><div id="indicatorY" style="background: rgb(255, 153, 0); width: 4px; height: 70px; position: fixed; top: 35px; left: 0px; z-index: 10000000; display: none;"></div><img src="https://a.tribalfusion.com/i.cid?c=415903&amp;d=30&amp;page=landingPage" width="1" height="1" border="0"><div style="display: none; visibility: hidden;">
+<script type="text/javascript">var axel=Math.random()+"",a=1E13*axel;document.write('\x3cimg src\x3d"https://pubads.g.doubleclick.net/activity;xsp\x3d552731;ord\x3d'+a+'?" width\x3d1 height\x3d1 border\x3d0/\x3e');</script><img src="https://pubads.g.doubleclick.net/activity;xsp=552731;ord=3435636294475.872?" width="1" height="1" border="0">
+<noscript></noscript></div><img src="https://tags.w55c.net/rs?id=a550e73ad79f4517a4ad44875b97f951&amp;t=marketing"><script src="https://px.ads.linkedin.com/collect/?time=1562554399029&amp;pid=610404&amp;url=https%3A%2F%2Fwww.exploratorium.edu%2Fronh%2Fage%2F&amp;fmt=js&amp;s=1" type="text/javascript"></script></body></html>
+
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Pompiere" rel="stylesheet">
+	<meta charset="utf-8">
+	
+												
